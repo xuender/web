@@ -1,34 +1,35 @@
 {
-  "name": "web",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "build": "webpack -p",
-    "start": "webpack-dev-server --hot",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "bootstrap-sass": "^3.3.7",
-    "jquery": "^3.2.1"
-  },
-  "devDependencies": {
-    "@types/node": "^8.0.12",
-    "@types/webpack": "^3.0.4",
-    "css-loader": "^0.28.4",
-    "extract-text-webpack-plugin": "^3.0.0",
-    "file-loader": "^0.11.2",
-    "html-webpack-plugin": "^2.29.0",
-    "node-sass": "^4.5.3",
-    "sass-loader": "^6.0.6",
-    "style-loader": "^0.18.2",
-    "ts-loader": "^2.2.2",
-    "ts-node": "^3.2.0",
-    "typescript": "^2.4.1",
-    "url-loader": "^0.5.9",
-    "webpack": "^3.2.0",
-    "webpack-dev-server": "^2.5.1"
-  }
+	"name": "web",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"build": "webpack -p",
+		"start": "webpack-dev-server --hot",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"bootstrap-sass": "^3.3.7",
+		"codemirror": "^5.27.4",
+		"jquery": "^3.2.1"
+	},
+	"devDependencies": {
+		"@types/node": "^8.0.12",
+		"@types/webpack": "^3.0.4",
+		"css-loader": "^0.28.4",
+		"extract-text-webpack-plugin": "^3.0.0",
+		"file-loader": "^0.11.2",
+		"html-webpack-plugin": "^2.29.0",
+		"node-sass": "^4.5.3",
+		"sass-loader": "^6.0.6",
+		"style-loader": "^0.18.2",
+		"ts-loader": "^2.2.2",
+		"ts-node": "^3.2.0",
+		"typescript": "^2.4.1",
+		"url-loader": "^0.5.9",
+		"webpack": "^3.2.0",
+		"webpack-dev-server": "^2.5.1"
+	}
 }

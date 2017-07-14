@@ -12,7 +12,7 @@ const config: webpack.Configuration = {
 	entry: {
 		app: './src/index.js',
 		// app: './src/index.ts',
-		vendors: ['jquery'],
+		vendors: ['jquery', 'codemirror'],
 	},
 	output: {
 		path: path.resolve(__dirname, 'dist'),
