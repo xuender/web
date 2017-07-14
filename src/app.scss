@@ -1,0 +1,19 @@
+body {
+	padding-top: 50px;
+	background-color: black;
+}
+footer, section {
+	min-height: 600px;
+}
+header, #gui, #api {
+	padding-top: 50px;
+	background-color: #79c3d2;
+	color: #143352;
+	box-shadow: 0 -2px 5px black;
+}
+#synopsis, #guide, #about {
+	padding-top: 50px;
+	background-color: #2e2e2e;
+	color: #eaf2d9;
+	text-shadow: 0 -1px 1px #262626;
+}
