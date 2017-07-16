@@ -3,7 +3,7 @@ import * as path from 'path';
 import * as HtmlWebpackPlugin from 'html-webpack-plugin';
 import * as ExtractTextPlugin from 'extract-text-webpack-plugin';
 const extractSass = new ExtractTextPlugin({
-	filename: "[name].[hash].css",
+	filename: "[name].[hash:8].css",
 	disable: process.env.NODE_ENV === "development"
 });
 declare var __dirname;
@@ -12,14 +12,31 @@ const config: webpack.Configuration = {
 	entry: {
 		app: './src/index.js',
 		// app: './src/index.ts',
-		vendors: ['jquery', 'codemirror'],
+		vendors: ['jquery'],
 	},
 	output: {
 		path: path.resolve(__dirname, 'dist'),
-		filename: '[name]-[hash].js'
+		filename: '[name]-[hash:8].js'
 	},
 	module: {
 		loaders: [
+			{
+				test: /\.(png|jpg)$/,
+				loader: 'url-loader?limit=8192&name=static/[name]-[hash:8].[ext]',
+			},
+			{
+				test: /\.html$/,
+				loader: 'html-withimg-loader?min=false'
+			},
+			{
+				test: /\.css$/,
+				use: extractSass.extract({
+					use: [{
+						loader: "css-loader"
+					}],
+					fallback: "style-loader"
+				})
+			},
 			{
 				test: /\.scss$/,
 				use: extractSass.extract({
@@ -38,23 +55,23 @@ const config: webpack.Configuration = {
 			// Fonts
 			{
 				test: /\.woff(\?v=\d+\.\d+\.\d+)?$/,
-				loaders: ['url-loader?limit=10000&mimetype=application/font-woff']
+				loaders: ['url-loader?name=static/[name]-[hash:8].[ext]']
 			},
 			{
 				test: /\.woff2(\?v=\d+\.\d+\.\d+)?$/,
-				loaders: ['url-loader?limit=10000&mimetype=application/font-woff']
+				loaders: ['url-loader?name=static/[name]-[hash:8].[ext]']
 			},
 			{
 				test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
-				loaders: ['url-loader?limit=10000&mimetype=application/octet-stream']
+				loaders: ['url-loader?name=static/[name]-[hash:8].[ext]']
 			},
 			{
 				test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
-				loaders: ['file-loader']
+				loaders: ['file-loader?name=static/[name]-[hash:8].[ext]']
 			},
 			{
 				test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
-				loaders: ['url-loader?limit=10000&mimetype=image/svg+xml']
+				loaders: ['url-loader?name=static/[name]-[hash:8].[ext]']
 			}
 		]
 	},

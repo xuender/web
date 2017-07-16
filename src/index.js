@@ -35,4 +35,8 @@ require('bootstrap-sass/assets/stylesheets/bootstrap/_wells.scss');
 require('bootstrap-sass/assets/stylesheets/bootstrap/_close.scss');
 */
 require('bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js');
+require('bootstrap-sass/assets/javascripts/bootstrap/collapse.js');
+require('highlight.js/styles/default.css');
+require('highlight.js/styles/solarized-dark.css');
 require('./app.ts');
+require('./index.html');

@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>web</title>
+	<title>Waiter 推荐系统</title>
 </head>
 
 <body data-spy="scroll" data-target="nav">
@@ -14,13 +14,13 @@
 	<nav class="navbar navbar-inverse navbar-fixed-top">
 		<div class="container">
 			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
 					<span class="sr-only">Toggle navigation</span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<div class="collapse navbar-collapse" id="navbar">
 					<ul class="nav navbar-nav">
 						<li><a href="#synopsis">简介</a></li>
 						<li><a href="#gui">界面</a></li>
@@ -34,16 +34,79 @@
 	</nav>
 	<header>
 		<div class="container">
-			<h1>web</h1>
+			<div class="jumbotron">
+				<h1>Waiter 推荐系统</h1>
+				<p>简单、安全、易用、高效的推荐系统</p>
+				<p>
+					<a class="btn btn-primary btn-lg" href="/admin.html" role="button">免费注册使用</a>
+				</p>
+			</div>
 		</div>
 	</header>
 	<section id="synopsis">
 		<div class="container">
 			<h1>简介</h1>
-			<h2>速度超快</h2>
-			<h2>超级安全</h2>
-			<h2>超级可靠</h2>
-			<h2>初创用户免费</h2>
+			<div class="row">
+				<img src="static/surprise.jpg" class="img-responsive img-thumbnail col-lg-5">
+				<div class="col-lg-7">
+					<h2>使用超级<mark>简单</mark></h2>
+					只有4个接口：
+					<ul>
+						<li>单个用户商品关系上传</li>
+						<li>批量用户商品关系上传</li>
+						<li>获取基于爱好相似用户的推荐结果</li>
+						<li>获取基于关联商品的推荐结果</li>
+					</ul>
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="col-lg-6">
+					<h2>隐私数据非常<mark>安全</mark></h2>
+					<p>用户信息、商品信息无需提供详情，只要能唯一标识即可。</p>
+				</div>
+				<div class="col-lg-6">
+					<pre><code class="json">[
+    {
+        "code": "U1",
+        "items": ["I1", "I2", "I3"]
+    },
+    {
+        "code": "U2",
+        "items": ["I3", "I4"]
+    },
+    {
+        "code": "U3",
+        "items": ["I2", "I4", "I5"]
+    }
+]</code></pre>
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<img src="static/easy.jpg" class="img-responsive img-thumbnail col-lg-5">
+				<div class="col-lg-7">
+					<h2>后台管理绝对<mark>易用</mark></h2>
+					<ul>
+						<li>用户排行榜</li>
+						<li>商品排行榜</li>
+						<li>实时动态数据显示</li>
+						<li>每日汇总</li>
+						<li>每月汇总</li>
+						<li>每年汇总</li>
+					</ul>
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="col-lg-7">
+					<h2>数据处理真正<mark>高效</mark></h2>
+					<p>1000商品，100000用户，推荐结果耗时0.01秒</p>
+				</div>
+				<div class="col-lg-5">
+					太高效了。。。。
+				</div>
+			</div>
 		</div>
 	</section>
 	<section id="gui">
@@ -58,10 +121,9 @@
 		<div class="container">
 			<h1>使用</h1>
 			<h2>jQuery</h2>
-			<pre>
-			var w = $('#id').width();
-			console.log(w);
-			</pre>
+			<pre><code class="js">var w = $('#id').width();
+console.log(w);
+</code></pre>
 			<h2>angularjs</h2>
 			<h2>angular2+</h2>
 		</div>
